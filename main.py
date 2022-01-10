@@ -2,8 +2,6 @@ import random
 from math import floor
 import time
 
-random.seed(0)
-
 
 class ColorConstants:
     HEADER = '\033[95m'
@@ -91,7 +89,10 @@ def evaluator(score, result, count, correct, priklad_time, average_time, total_t
             ColorConstants.OK_CYAN + f"Tento priklad ti trval {ColorConstants.BOLD}{round(priklad_time, 2)}s{ColorConstants.END_C}{ColorConstants.OK_CYAN}. Priemerny priklad ti trva  {ColorConstants.BOLD}{round(average_time, 2)}s{ColorConstants.END_C}{ColorConstants.OK_CYAN}{ColorConstants.END_C}")
 
 
-def main():
+def main(seed=None):
+    if seed is not None:
+        random.seed(seed)
+
     mul_pairs = get_mul_pairs()
     add_pairs = get_add_pairs()
     correct_count = 0
