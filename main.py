@@ -80,7 +80,7 @@ def evaluator(score, result, count, correct, priklad_time, average_time, total_t
         print(ColorConstants.OK_GREEN + "Vyborne, si hviezda!" + ColorConstants.END_C)
     else:
         print(
-            ColorConstants.FAIL + f"Odpoved bola {ColorConstants.BOLD}{result}{ColorConstants.END_C}{ColorConstants.FAIL}, nevadi nabuduce to bude lepise" + ColorConstants.END_C)
+            ColorConstants.FAIL + f"Odpoved bola {ColorConstants.BOLD}{result}{ColorConstants.END_C}{ColorConstants.FAIL}, nevadi nabuduce to bude lepsie" + ColorConstants.END_C)
     if print_accuracy:
         accuracy = correct / count
         fail_or_not = ColorConstants.FAIL if accuracy < accuracy_threshold else ColorConstants.OK_GREEN
@@ -88,7 +88,7 @@ def evaluator(score, result, count, correct, priklad_time, average_time, total_t
             fail_or_not + f"Tvoja uspesnost je {ColorConstants.BOLD}{round(accuracy * 100, 2)}%{ColorConstants.END_C}{fail_or_not}" + ColorConstants.END_C)
     if print_time:
         print(
-            ColorConstants.OK_CYAN + f"Tento priklad ti trval {ColorConstants.BOLD}{round(priklad_time, 2)}s{ColorConstants.END_C}{ColorConstants.OK_CYAN}. Priemerny priklad ti trva {round(average_time, 2)}")
+            ColorConstants.OK_CYAN + f"Tento priklad ti trval {ColorConstants.BOLD}{round(priklad_time, 2)}s{ColorConstants.END_C}{ColorConstants.OK_CYAN}. Priemerny priklad ti trva  {ColorConstants.BOLD}{round(average_time, 2)}s{ColorConstants.END_C}{ColorConstants.OK_CYAN}{ColorConstants.END_C}")
 
 
 def main():
